@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/views/widgets/adaptive_layout.dart';
-import 'package:responsive_dash_board/views/widgets/custom_drawer.dart';
+
+import 'package:responsive_dash_board/views/widgets/dash_board_desktop_layout.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -10,7 +11,7 @@ class HomeViewBody extends StatelessWidget {
     return AdaptiveLayout(
       mobileLayout: (context) => const SizedBox(),
       tabletLayout: (context) => const SizedBox(),
-      desktopLayout: (context) => const CustomDrawer(),
+      desktopLayout: (context) => const DashBoardDesktopLayout(),
     );
   }
 }
