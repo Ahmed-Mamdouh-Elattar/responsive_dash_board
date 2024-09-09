@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/views/widgets/custom_background_container.dart';
 
 import 'package:responsive_dash_board/views/widgets/my_card_section.dart';
+import 'package:responsive_dash_board/views/widgets/transaction_history_secion.dart';
 
 class MyCardAndTransactionHistory extends StatelessWidget {
   const MyCardAndTransactionHistory({super.key});
@@ -16,7 +17,8 @@ class MyCardAndTransactionHistory extends StatelessWidget {
           Divider(
             height: 40,
             color: Color(0xffF1F1F1),
-          )
+          ),
+          TransactionHistorysection(),
         ],
       ),
     );
