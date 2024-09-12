@@ -12,12 +12,12 @@ class DashBoardDesktopLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Row(
       children: [
-        Expanded(child: CustomDrawer()),
+        Expanded(flex: 2, child: CustomDrawer()),
         SizedBox(
           width: 32,
         ),
         Expanded(
-          flex: 3,
+          flex: 4,
           child: SingleChildScrollView(
             child: AllExpenseeAndQuickInvoiceSection(),
           ),
@@ -25,7 +25,7 @@ class DashBoardDesktopLayout extends StatelessWidget {
         SizedBox(
           width: 24,
         ),
-        Expanded(flex: 2, child: MyCardWithTransactionHistoryAndIncomeSection())
+        Expanded(flex: 3, child: MyCardWithTransactionHistoryAndIncomeSection())
       ],
     );
   }
