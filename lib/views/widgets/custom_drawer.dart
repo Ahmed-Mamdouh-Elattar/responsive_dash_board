@@ -19,7 +19,7 @@ class CustomDrawer extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 8),
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 8),
               child: UserInfoListTile(
                 user: UserInfoModel(
                   image: Assets.imagesAvatar3,

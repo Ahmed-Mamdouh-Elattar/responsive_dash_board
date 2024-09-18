@@ -32,23 +32,35 @@ class InActiveAllExpenseItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyle.styleSemiBold16,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyle.styleSemiBold16(context),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyle.styleRegular14,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyle.styleRegular14(context),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensesItemModel.price,
-            style: AppStyle.styleSemiBold24,
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyle.styleSemiBold24(context),
+            ),
           ),
         ],
       ),

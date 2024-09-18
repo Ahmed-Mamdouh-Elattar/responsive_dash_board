@@ -30,11 +30,11 @@ class IncomItemDetails extends StatelessWidget {
         ),
         title: Text(
           incomeItemModel.title,
-          style: AppStyle.styleRegular16,
+          style: AppStyle.styleRegular16(context),
         ),
         trailing: Text(
           incomeItemModel.value,
-          style: AppStyle.styleMedium16.copyWith(
+          style: AppStyle.styleMedium16(context).copyWith(
             color: const Color(0xff208CC8),
           ),
         ),

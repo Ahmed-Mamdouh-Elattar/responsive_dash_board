@@ -32,40 +32,51 @@ class _AllExpensesItemListState extends State<AllExpensesItemList> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map((e) {
-        int index = e.key;
-        if (index == 1) {
-          return Expanded(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 12),
-              child: GestureDetector(
-                onTap: () {
-                  updateSelectedItem(index);
-                },
-                child: AllExpensesItem(
-                  allExpensesItemModel: e.value,
-                  isActive: selectedItem == index,
-                ),
-              ),
-            ),
-          );
-        }
-        return Expanded(
+      children: [
+        Expanded(
           child: GestureDetector(
             onTap: () {
-              updateSelectedItem(index);
+              updateSelectedItem(index: 0);
             },
             child: AllExpensesItem(
-              allExpensesItemModel: e.value,
-              isActive: selectedItem == index,
+              allExpensesItemModel: items[0],
+              isActive: selectedItem == 0,
             ),
           ),
-        );
-      }).toList(),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateSelectedItem(index: 1);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[1],
+              isActive: selectedItem == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateSelectedItem(index: 2);
+            },
+            child: AllExpensesItem(
+              allExpensesItemModel: items[2],
+              isActive: selectedItem == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
-  void updateSelectedItem(int index) {
+  void updateSelectedItem({required int index}) {
     setState(() {
       selectedItem = index;
     });

@@ -11,7 +11,7 @@ class CustomHeader extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppStyle.styleSemiBold20,
+          style: AppStyle.styleSemiBold20(context),
         ),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
@@ -24,9 +24,9 @@ class CustomHeader extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Text(
+              Text(
                 "Monthly",
-                style: AppStyle.styleMedium16,
+                style: AppStyle.styleMedium16(context),
               ),
               const SizedBox(
                 width: 18,

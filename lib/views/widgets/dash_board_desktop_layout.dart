@@ -18,9 +18,11 @@ class DashBoardDesktopLayout extends StatelessWidget {
         ),
         Expanded(
           flex: 4,
-          child: SingleChildScrollView(
-            child: AllExpenseeAndQuickInvoiceSection(),
-          ),
+          child: CustomScrollView(slivers: [
+            SliverFillRemaining(
+                hasScrollBody: false,
+                child: AllExpenseeAndQuickInvoiceSection()),
+          ]),
         ),
         SizedBox(
           width: 24,

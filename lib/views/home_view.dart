@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/views/widgets/custom_drawer.dart';
 import 'package:responsive_dash_board/views/widgets/home_view_body.dart';
 
@@ -17,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
     return Scaffold(
       key: scaffoldKey,
       drawer: const CustomDrawer(),
-      appBar: MediaQuery.sizeOf(context).width < 800
+      appBar: MediaQuery.sizeOf(context).width < SizeConfig.tablet
           ? AppBar(
               elevation: 0,
               backgroundColor: Colors.white,

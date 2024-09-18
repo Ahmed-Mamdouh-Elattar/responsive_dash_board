@@ -29,24 +29,38 @@ class ActiveAllExpenseItem extends StatelessWidget {
           const SizedBox(
             height: 34,
           ),
-          Text(
-            allExpensesItemModel.title,
-            style: AppStyle.styleSemiBold16.copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.title,
+              style: AppStyle.styleSemiBold16(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
           const SizedBox(
             height: 8,
           ),
-          Text(
-            allExpensesItemModel.date,
-            style: AppStyle.styleRegular14
-                .copyWith(color: const Color(0xffFAFAFA)),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.date,
+              style: AppStyle.styleRegular14(context)
+                  .copyWith(color: const Color(0xffFAFAFA)),
+            ),
           ),
           const SizedBox(
             height: 16,
           ),
-          Text(
-            allExpensesItemModel.price,
-            style: AppStyle.styleSemiBold24.copyWith(color: Colors.white),
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            alignment: Alignment.centerLeft,
+            child: Text(
+              allExpensesItemModel.price,
+              style: AppStyle.styleSemiBold24(context)
+                  .copyWith(color: Colors.white),
+            ),
           ),
         ],
       ),
